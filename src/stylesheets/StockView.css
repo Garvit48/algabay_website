@@ -1,0 +1,49 @@
+.stockViewContainer {
+    height: 120vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10vh 0;
+}
+
+.stockViewGraphContainer {
+    height: 100%;
+    width: 90%;
+    margin-top: 12vh;
+}
+.stockViewText {
+    font-size: 5.2vw;
+    font-family: var(--primaryBoldFont);
+    color: var(--secondaryColor);
+    
+}
+
+.stockViewSubtext {
+    font-family: var(--primarySemiBoldFont);
+    font-size: 1.8vw;
+    color: var(--subtextColor);
+    padding: 0vh 2vw;
+    padding-top: 3.2vw;
+    text-align: center;
+    width: 90%;
+}
+
+iframe {
+    border: none;
+}
+
+@media only screen and (max-width: 468px) {
+    .stockViewText {
+        width: 90%;
+        font-size: 5vh;
+        text-align: center;
+    }
+
+    .stockViewSubtext {
+        font-size: 2vh;
+        margin-top: 4vh;
+    }
+
+}

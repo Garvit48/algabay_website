@@ -1,0 +1,128 @@
+.pricingSectionContainer {
+    width: 100%;
+    height: 80vh;
+    background-image: url("../assets/images/background.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.pricingContainer {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+}
+
+.pricingGrid {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid: rows;
+    width: 100%;
+    height: 100%;
+    margin: 0 2vw;
+    border: 1px solid #808080;
+    border-radius: 12px;
+}
+
+
+
+.pricingTier {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 0.5px solid #919191;
+}
+
+.pricingTier:last-child {
+    border: none;
+}
+
+.pricingTierName {
+    font-family: var(--primaryBoldFont);
+    font-size: 3.2vw;
+    text-align: center;
+    width: 80%;
+    
+    
+}
+
+.pricingTierDesc {
+    font-family: var(--primarySemiBoldFont);
+    font-size: 1.2vw;
+    color: var(--subtextColor);
+    margin-top: 1vh;
+    text-align: center;
+}
+
+.pricingTierButton {
+    width: 90%;
+    height: 8vh;
+    font-family: var(--primaryBoldFont);
+    font-size: 1.24vw;
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    /* background: rgba(220, 220, 220, 0.381);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); */
+    border: 4px solid var(--secondaryColor);
+    border-radius: 10px;
+    margin-top: 2vh;
+    transition: 0.2s all ease-out;
+}
+
+.pricingTierButton:hover {
+    background-color: inherit;
+    transition: all 0.2s ease-out;
+    color: var(--secondaryColor);
+}
+
+.pricingTierFeatureList {
+    font-family: var(--primaryBoldFont);
+    font-size: 1.2vw;
+    list-style: none;
+    margin-top: 5vh;
+}
+
+.pricingTierFeatureList li {
+    margin: 2vh 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .pricingSectionContainer {
+        height: 100vh;
+        background-image: url("../assets/images/backgroundMobile.png");
+        background-position: center;
+    }
+
+    .pricingGrid {
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .pricingTier {
+        border-bottom: 0.5px solid #919191;
+    }
+
+    .pricingTierName {
+        font-size: 4vh;
+    }
+
+    .pricingTierDesc {
+        font-size: 1.8vh;
+    }
+
+    .pricingTierButton {
+        height: 4vh;
+        border-radius: 4px;
+        font-size: 1.8vh;
+    }
+
+    .pricingTierFeatureList {
+        font-size: 1.8vh;
+    }
+}

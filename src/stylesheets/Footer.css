@@ -1,0 +1,100 @@
+a {
+    text-decoration: none;
+    color: var(--secondaryColor);
+}
+
+a:visited {
+color: var(--secondaryColor);
+}
+
+.FooterWrapper{
+    height: 35vh;
+    width: 100%;
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.FooterWrapper .Mn{
+    height: 90%;
+    margin: 0 0.5rem;
+}
+
+.LogoCont{
+    width: 30%;
+}
+.AbtCont{
+    width: 12%;
+}
+.SerCont{
+    width: 12%;
+}
+.CntCont{
+    width: 22%;
+}
+.LogoCont .LogoImg{
+    height: 50px;
+}
+.LogoCont p{
+    color: var(--subtextColor);
+    width: 90%;
+    font-size: 2.4vh;
+    margin-top: 1rem;
+    font-family: var(--primaryFont);
+}
+
+.Headers{
+    font-size: 3.6vh;
+    color: var(--secondaryColor);
+    font-family: var(--primaryFontBold);
+}
+.Links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    line-height: 1.8rem;
+    margin-top: 0.6rem;
+    font-family: var(--primaryFont);
+    color: var(--subtextColor);
+    cursor: pointer;
+}
+.SocialIcons{
+    display: flex;
+    flex-direction: row;
+    color: var(--secondaryColor);
+    width: 65%;
+    justify-content: space-between;
+    overflow: hidden;
+    align-items: center;
+    margin: 1.3rem 0;
+}
+.SocialIcons a{
+    cursor: pointer;
+}
+
+.CpywrtText{
+    width: 100%;
+    margin-top: 0.6rem;
+    font-family: var(--primaryFont);
+    color: var(--subtextColor);
+}
+
+@media only screen and (max-width:768px){
+    .FooterWrapper{
+        flex-direction: column;
+        height: auto;
+    }
+    .FooterWrapper .Mn{
+        height: auto;
+        width: 80%;
+        text-align: center;
+        margin: 2rem 0;
+    }
+    .SocialIcons{
+        justify-content: space-evenly;
+        width: 100%;
+    }
+}

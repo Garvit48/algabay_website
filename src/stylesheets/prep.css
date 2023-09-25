@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primaryColor: #000000;
+    --secondaryColor: #ffffff;
+    --accentColorStart: #5bead7;
+    --accentColorFinish: #55a6f7;
+    --subtextColor: rgb(225, 225, 225);
+    --primaryFont: OpenSans;
+    --primarySemiBoldFont: OpenSansSemiBold;
+    --primaryBoldFont: OpenSansBold;
+}
+
+
+@property --o {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%;
+}
+body {
+    color: var(--secondaryColor);
+    background-color: var(--primaryColor);
+    background-image: radial-gradient(circle at 100vw 110vh, var(--accentColorStart), var(--accentColorFinish), transparent var(--o));
+
+    animation: backgroundAnimation 0.8s ease-out forwards;
+    animation-delay: 1.2s;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        --o: 0%;
+    }
+
+    100% {
+        --o: 15%;
+    }
+}
+
+.gradientText {
+    background: linear-gradient(to left, var(--accentColorStart), var(--accentColorFinish));
+    -webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+    transition: all 0.5s linear;
+}
+
+.underline {
+	display: inline-block;
+	position: relative;
+	transition: all 0.5s cubic-bezier(.55, 0, .1, 1);
+    
+}
+
+.underline:after {
+	content: '';
+    transform: scaleX(0);
+	position: absolute;
+	display: block;
+	width: 110%;
+	height: 0.6vh;
+	/* box-shadow: 0 1px rgba(255,255,255,0.6); */
+
+    margin-left: -0.2em;
+	background: linear-gradient(to right, var(--accentColorStart), var(--accentColorFinish));
+	transform-origin: center left;
+	animation: underline 1s 0.5s cubic-bezier(.55, 0, .1, 1) 1;
+	transition: transform 0.5s cubic-bezier(.55, 0, .1, 1);
+}
+
+
+/* Little hover effect */
+
+.underline:hover {
+	color: var(--accentColorFinish);
+    scale: 1.1;
+}
+
+
+
+.underline:hover:after {
+	transform: scaleX(1);
+	transform-origin: center right;
+}
+
+.animatedUnderline {
+	display: inline-block;
+	position: relative;
+	transition: all 0.5s cubic-bezier(.55, 0, .1, 1);
+    
+}
+
+.animatedUnderline:after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 110%;
+	height: 0.6vh;
+	/* box-shadow: 0 1px rgba(255,255,255,0.6); */
+
+    margin-left: -0.2em;
+	background: linear-gradient(to right, var(--accentColorStart), var(--accentColorFinish));
+	transform-origin: center left;
+    animation: underlineAnimation 1s cubic-bezier(.55, 0, .1, 1) forwards;
+	transition: transform 0.5s ;
+}
+
+
+
+.animatedUnderline:hover:after {
+	transform: scaleX(1);
+	transform-origin: center right;
+}
+
+.fadeUpAnimation {
+    animation: fadeInUp 1s cubic-bezier(.55, 0, .1, 1) forwards;
+}
+.fadeInAnimation {
+    animation: fadeIn 1s cubic-bezier(.55, 0, .1, 1) forwards;
+}
+.fadeLeftAnimation {
+    animation: fadeInLeft 1s cubic-bezier(.55, 0, .1, 1) forwards;
+}
+.fadeRightAnimation {
+    animation: fadeInRight 1s cubic-bezier(.55, 0, .1, 1) forwards;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url('../assets/fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: "OpenSansBold";
+    src: url('../assets/fonts/OpenSans-Bold.ttf');
+}
+
+@font-face {
+    font-family: "OpenSansSemiBold";
+    src: url('../assets/fonts/OpenSans-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url('../assets/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: "MontserratBold";
+    src: url('../assets/fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: "MontserratSemiBold";
+    src: url('../assets/fonts/Montserrat-SemiBold.ttf');
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--primaryColor);
+}
+::-webkit-scrollbar-thumb{
+    background-color: #3b3b3b;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #4a4a4a;
+    cursor: pointer;
+}
+
+@keyframes underlineAnimation {
+    from {
+        transform: scaleX(0);
+    }
+
+     to {
+        transform: scaleX(1);
+     }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(60%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(25%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        transform: translateX(-25%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+
+@media only screen and (max-width: 1068px) {
+    body {
+        background-image: none;
+    }
+}

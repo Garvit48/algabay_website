@@ -1,0 +1,73 @@
+.navbarContainer {
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 1000000;
+}
+
+.navbarLogo {
+    width: 9vw;
+    position: absolute;
+    left: 3.2vw;
+    top: 2.4vh;
+    filter: brightness(1.1);
+}
+
+.navbarList {
+    list-style: none;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbarButton {
+    padding: 0.6vw 2.4vw;
+    background-color: inherit;
+        background: rgba(151, 151, 151, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+
+    background-size: 200%;
+    border-radius: 10px;
+    border: none;
+    font-family: var(--primaryBoldFont);
+    font-size: 1.2vw;
+    color: var(--secondaryColor);
+    transition: 0.4s all ease;
+    animation-delay: 1.6s;
+    transition: all 0.4s ease-out;
+}
+
+.navbarButton:hover {
+    background-image: linear-gradient(to right, var(--accentColorFinish), var(--accentColorStart));
+    transition: all 0.4s ease-out;
+}
+
+.navbarButton:hover {
+    background-position: 100% 100%;
+    transition: 0.4s all ease;
+}
+.navbarList li {
+    text-decoration: none;
+    padding: 2.4vw 2vw;
+    float: left;
+}
+
+.navbarList li a {
+    text-decoration: none;
+    color: var(--secondaryColor);
+    font-family: OpenSans;
+    font-size: 1.2vw;
+}
+
+@media only screen and (max-width: 468px) {
+    .navbarList {
+        display: none;
+    }
+
+    .navbarLogo {
+        width: 8vh;
+    }
+}
