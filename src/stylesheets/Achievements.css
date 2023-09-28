@@ -1,0 +1,55 @@
+.achievementsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    padding: 10vh 0;
+}
+
+.achievementsSectionContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.achievementsText {
+    width: 100%;
+    text-align: center;
+    font-size: 4vw;
+    font-family: var(--primaryBoldFont);
+}
+
+#microsoftImg {
+    width: 20%;
+}
+
+#startupImg {
+    width: 20%;
+}
+
+#meityImg {
+    width: 24%;
+}
+
+@media only screen and (max-width: 968px) {
+    .achievementsContainer {
+        flex-direction: column;
+        gap: 20vh;
+    }
+
+    .achievementsText {
+        font-size: 5vh;
+    }
+    #microsoftImg {
+        width: 60%;
+    }
+    
+    #startupImg {
+        width: 60%;
+    }
+    
+    #meityImg {
+        width: 64%;
+    }
+}

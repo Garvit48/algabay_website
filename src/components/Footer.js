@@ -32,10 +32,9 @@ const Footer = () => {
             <div className='CntCont Mn'>
                 <p className='Headers AbtHead'>Socials</p>
                 <div className='SocialIcons'>
-                    <a href='/'><LinkedIn sx={{fontSize:35}} /></a>
+                    <a href='https://in.linkedin.com/company/algabay?trk=public_profile_topcard-current-company'><LinkedIn sx={{fontSize:35}} /></a>
                     <a href='/'><Twitter sx={{fontSize:35}}/></a>
-                    <a href='/'><Instagram sx={{fontSize:35}}/></a>
-                    <a href='/'><Facebook sx={{fontSize:35}}/></a>
+                    <a href='https://instagram.com/algabayofficial'><Instagram sx={{fontSize:35}}/></a>
                 </div>
                 <p className='CpywrtText'>2023 © Algabay AI Private Limited <br /> All rights reserved.</p>
             </div>

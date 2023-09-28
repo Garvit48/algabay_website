@@ -1,0 +1,142 @@
+#contactUsFormContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 8rem;
+    overflow: hidden;
+}
+
+
+#contactUsFormInfo {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0 4vw;
+}
+#contactUsForm {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 4vw;
+}
+#contactUsFormH1 {
+    font-family: var(--primaryBoldFont);
+    font-size: 3.2vw;
+    color: var(--secondaryColor);
+}
+.contactUsFormInputLabel {
+    width: 100%;
+    color: var(--secondaryColor);
+    font-family: var(--primaryBoldFont);
+    font-size: 1.2vw;
+}
+
+.contactUsFormInput {
+    width: 100%;
+    height: 5vh;
+    font-family: var(--primaryFont);
+    font-size: 1.2vw;
+    padding: 1vh 1vw;
+    border-radius: 8px;
+}
+
+#contactUsFormEmail {
+    font-family: var(--primaryBoldFont);
+    font-size: 2.2vw;
+    color: var(--secondaryColor);
+    transition: 0.2s all ease-out;
+}
+
+#contactUsFormEmail:hover {
+    color: var(--accentColor);
+    transition: 0.2s all ease-out;
+}
+
+#contactUsFormP1 {
+    font-family: var(--primaryFont);
+    font-size: 1.4vw;
+    color: var(--secondaryColor);
+}
+.contactUsFormAddressTitle {
+    font-family: var(--primaryBoldFont);
+    font-size: 1.4vw;
+    color: var(--secondaryColor); 
+}
+
+.contactUsFormAddressDesc {
+    font-family: var(--primaryFont);
+    font-size: 1.2vw;
+    color: var(--secondaryColor); 
+}
+
+#contactUsSendButton {
+    width: 20%;
+    padding: 2vh 2vw;
+    font-family: var(--primaryBoldFont);
+    font-size: 1.2vw;
+    background-color: var(--accentColorFinish);
+    color: var(--secondaryColor);
+    border: 2px soild var(--accentColorFinish);
+    transition: 0.2s all ease-out;
+    border-radius: 10px;
+}
+
+#contactUsSendButton:hover {
+    background-color: inherit;
+    transition: 0.2s all ease-out;
+    
+}
+
+@media only screen and (max-width: 968px) {
+    #contactUsFormInfo {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    #contactUsFormContainer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    #contactUsFormH1 {
+        font-size: 5vh;
+        
+    }
+
+    #contactUsFormP1 {
+        font-size: 2vh;
+        
+    }
+
+    #contactUsForm {
+        width: 80%;
+        
+    }
+
+    .contactUsFormInputLabel {
+        font-size: 2vh;
+    }
+
+    .contactUsFormInput {
+        font-size: 2vh;
+    }
+
+    #contactUsFormEmail {
+        font-size: 3.2vh;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .contactUsFormInput {
+        height: 2vh;
+    }
+    
+    #contactUsSendButton {
+        font-size: 2vh;
+        width: 60%;
+    }
+}

@@ -3,8 +3,9 @@ import Navbar from '../components/Navbar'
 import LandingPageBanner from '../components/LandingPageBanner'
 import StockView from '../components/StockView'
 import InfoSectionComponent from '../components/InfoSectionComponent'
+import Achievements from "../components/Achievements"
 import PricingSection from '../components/PricingSection'
-import ContactUs from "../components/ContactUs"
+import ContactUsForm from "../components/ContactUsForm"
 import Footer from "../components/Footer"
 
 const stockViewObserver = new IntersectionObserver((entries) => {
@@ -40,8 +41,9 @@ const LandingPage = () => {
         <LandingPageBanner />
         <InfoSectionComponent />
         <StockView />
+        <Achievements />
         <PricingSection />
-        <ContactUs />
+        <ContactUsForm />
         <Footer />
     </div>
   )
